@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hosts:wpkg xmlns:hosts="http://www.wpkg.org/hosts" xmlns:wpkg="http://www.wpkg.org/wpkg"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wpkg.org/hosts xsd/hosts.xsd ">
+
+	<host name="hostname" profile-id="custom" />
+	<host name=".+" profile-id="default" /> <!-- regex -->
+	
+</hosts:wpkg>

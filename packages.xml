@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Database of packages which are ready to be assigned to workstations. Assign
+	these packages by adding them to profiles which you associate with
+	workstations.
+
+	THIS IS A SAMPLE FILE.
+
+	More individual application package examples can be found here:
+		packages/
+
+	Templates for typical use-cases can be found at:
+		packages/Templates/
+
+	For detailed documentation on the XML structure, attributes etc it's
+	recommended to have a look at the XSD schema included here:
+		xsd/
+
+	An automatically generated documentation of the XML structure is included
+	here:
+		documents/
+	Just open documents/index.html in your favorite web browser.
+
+	For help on silent installation switches please refer to the WPKG wiki:
+		<http://wpkg.org/Category:Silent_Installers>
+
+	More documentation is available on the WPKG web-page as well:
+		<http://wpkg.org/Category:Documentation>
+-->
+
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wpkg.org/packages xsd/packages.xsd">
+	
+	<package id="CS5" name="Adobe CS5 Design Standard"  revision="500"  reboot="false"  priority="100">		
+		<check type="uninstall" condition="exists" path="Adobe Creative Suite 5 Design Standard" />
+ 		<install cmd='msiexec /i "%software%\CS5\Build\CS5.msi" /quiet' />
+ 		<upgrade cmd='msiexec /i "%software%\CS5\Build\CS5.msi" /quiet' />
+ 		<remove cmd='msiexec /x "%software%\CS5\Build\CS5.msi" /quiet' />
+ 	</package>
+	<package id="Fonts" name="Adobe and Open Source Fonts" priority="100" reboot="false" revision="1">
+	</package>
+	<package id="PFM" name="Pismo File Mount" priority="100" reboot="false" revision="1">
+		<install cmd='' />
+	</package>
+	<package id="Expression4" name="Expression Studio 4" priority="100" reboot="false" revision="1">
+		<install cmd='' />
+	</package>
+	<package id="Acro9Trial" name="Adobe Acrobat 9 Pro Extended Trial" priority="100" reboot="false" revision="1">
+		<install cmd='' />
+	</package>
+	<package id="AcrobatX" name="Adobe Acrobat X Standard (MSFT)" priority="100" reboot="false" revision="1">
+		<install cmd='' />
+	</package>
+	<package id="Cygwin" name="Cygwin" priority="100" reboot="false" revision="1">
+		<install cmd='%software%\cygwin.exe /silent' />
+	</package>
+	<package id="FreeFileSync" name="FreeFileSync" priority="100" reboot="false" revision="1">
+		<check type="file" condition="exists" path="c:\Program Files\FreeFileSync\FreeFileSync.exe" />
+	</package>
+
+
+</packages:packages>
